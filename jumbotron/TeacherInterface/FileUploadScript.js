@@ -54,7 +54,6 @@ function receiveFormValues(event)
   if(localStorage.getItem("files") == null){
     localStorage.setItem("files", []);
   }
-  localStorage.setItem("files", []);
   var files = localStorage.getItem("files");
   files.push(file);
 
