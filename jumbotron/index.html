@@ -28,6 +28,8 @@
   <h1 class="toph1">Digitaler Unterricht</h1>
 </nav>
 
+<script src="AuthenticationScript.js"></script>
+
 <!-- Main jumbotron for a primary marketing message or call to action -->
 <div class="jumbotron">
   <div class="container">
@@ -37,38 +39,39 @@
 </div>
 
 <div class="container">
-  <!-- Example row of columns -->
   <div class="row">
     <div class="col-md-4">
       <h2>Ich bin Schüler</h2>
       <form id="loginForm">
         <div class="form-group">
-          <label for="username" class="control-label">Username</label>
-          <input type="text" class="form-control" id="username" name="username" value="" required="" title="Please enter you username" placeholder="example@yourmail.com">
+          <label for="usernameSchueler" class="control-label">Username</label>
+          <input type="text" class="form-control" id="usernameSchueler" name="username" value="" required="" title="Please enter you username" placeholder="MaxMustermann">
           <span class="help-block"></span>
         </div>
         <div class="form-group">
-          <label for="password" class="control-label">Password</label>
+          <label for="passwordSchueler" class="control-label">Password</label>
           <input type="password" class="form-control" id="passwordSchueler" name="password" value="" required="" title="Please enter your password">
           <span class="help-block"></span>
         </div>
-        <a href="StudentInterface/Studentinterface.html" type="submit" class="btn btn-success btn-block">Login</a>
+        <button onclick="StudentClick(); return false" class="btn btn-success btn-block">Login</button>
       </form>
     </div>
+
     <div class="col-md-4">
       <h2>Ich bin Lehrer</h2>
       <form id="loginFormLehrer">
         <div class="form-group">
-          <label for="username" class="control-label">Username</label>
-          <input type="text" class="form-control" id="usernameLehrer" name="username" value="" required="" title="Please enter you username" placeholder="example@yourpassword.com">
+          <label for="usernameLehrer" class="control-label">Username</label>
+          <input type="text" class="form-control" id="usernameLehrer" name="username" value="" required="" title="Please enter you username" placeholder="MaxMustermann">
           <span class="help-block"></span>
         </div>
         <div class="form-group">
-          <label for="password" class="control-label">Password</label>
-          <input type="password" class="form-control" id="password" name="password" value="" required="" title="Please enter your password">
+          <label for="passwordLehrer" class="control-label">Password</label>
+          <input type="password" class="form-control" id="passwordLehrer" name="password" value="" required="" title="Please enter your password">
           <span class="help-block"></span>
         </div>
-        <a href="TeacherInterface/TeacherInterface.html" type="submit" class="btn btn-success btn-block">Login</a>          </form>
+        <button onclick="TeacherClick(); return false" class="btn btn-success btn-block">Login</button>
+      </form>
     </div>
   </div>
 </div>
