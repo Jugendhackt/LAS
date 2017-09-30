@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head onload="fillFields()">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="LAS für Lehrer">
   <meta name="author" content="MetaColon">
-  <title>Lehrer</title>
+  <title>Lehrer - Datei Upload</title>
   <!-- Bootstrap core CSS -->
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
         rel="stylesheet">
@@ -14,17 +14,37 @@
   <link href="Teacher.css" rel="stylesheet">
 </head>
 <body>
-  <div class="jumbotron">
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+  <a class="navbar-brand" href="#">LAS</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <h1 class="toph1">Digitaler Unterricht</h1>
+</nav>
+
+
+<script src="FileUploadScript.js" >onLoad()</script>
+
+<div class="jumbotron">
     <div class="container">
-      <h1 class="display-3">Datei-Upload</h1>
+      <h1 class="display-3">Datei Upload</h1>
       <p>Hier k&ouml;nnen Sie Dateien f&uuml;r Ihre Sch&uuml;ler hochladen</p>
     </div>
   </div>
 
   <div class="container">
-    <form>
+    <form id="form">
       <p><a class="btn btn-primary btn-lg" href="#" role="button">Datei hochladen</a></p>
-      <label
+      <label id="UploadedFileName"></label><br/>
+      Klasse:<br/>
+      <select id="KlasseDrop" name="Klasse"></select><br/>
+      Thema:<br/>
+      <select id="ThemaDrop" name="Thema"></select><br/>
+      Beschreibung:<br/>
+      <input id="beschreibung" type="text"><br/>
+      Typ:<br/>
+      <select id="TypDrop" name="Typ"></select><br/>
+      <p><a class="btn btn-secondary btn-lg" href="TeacherInterface.html" role="button" onclick="receiveFormValues()">Speichern</a></p>
     </form>
   </div>
 
