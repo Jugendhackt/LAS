@@ -37,7 +37,7 @@ function getThemen()
 
 function getTypen ()
 {
-  return ["Film", "PDF", "Bild"]
+  return ["PDF", "Bild"]
 }
 
 function handleFileSelect (evt)
