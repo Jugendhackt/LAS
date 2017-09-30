@@ -56,6 +56,7 @@ function handleFileSelect (evt)
     return function(e)
     {
       selectedFile = e.target.result;
+      metaDataSelectedFile = theFile;
       console.log(theFile, " - ", selectedFile);
     };
   })(files[0]);
