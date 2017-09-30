@@ -70,6 +70,11 @@ var uid;
 
 function receiveFormValues(event)
 {
+  console.log(document.getElementById("file"));
+  if(document.getElementById("video").value === "" && selectedFile === null){
+    showSnackbar();
+    return;
+  }
   console.log(document.getElementById("KlasseDrop").value);
   var file = {
     klasse: document.getElementById("KlasseDrop").value,
@@ -79,6 +84,7 @@ function receiveFormValues(event)
     data: selectedFile,
     metaData: metaDataSelectedFile,
     date: new Date().getDate(),
+    video: document.getElementById("video").value,
     id: uid++
   };
   event.preventDefault();
@@ -88,5 +94,14 @@ function receiveFormValues(event)
   files.push(file);
   localStorage.setItem("files",JSON.stringify(files));
   window.location.replace("..//TeacherInterface/TeacherInterface.html");
+
+}
+function showSnackbar()
+{
+  var x = document.getElementById("snackbar");
+
+  x.className = "show";
+
+  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
 }
 
