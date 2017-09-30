@@ -1,1 +1,1 @@
-vorläufiges Readme
+Let's revolutionize our school system.
