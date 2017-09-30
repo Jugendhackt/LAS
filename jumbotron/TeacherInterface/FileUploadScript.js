@@ -56,14 +56,16 @@ function handleFileSelect (evt)
     return function(e)
     {
       selectedFile = e.target.result;
-      console.log(selectedFile);
+      console.log(theFile, " - ", selectedFile);
     };
   })(files[0]);
 
   reader.readAsDataURL(files[0]);
 }
 
-var selectedFile = "";
+var selectedFile = null;
+var metaDataSelectedFile = null;
+var uid;
 
 function receiveFormValues(event)
 {
@@ -73,17 +75,20 @@ function receiveFormValues(event)
     thema: document.getElementById("ThemaDrop").value,
     beschreibung: document.getElementById("Beschreibung").value,
     typ: document.getElementById("TypDrop").value,
-    data: selectedFile
-  }
+    data: selectedFile,
+    metaData: metaDataSelectedFile,
+    date: new Date().getDate(),
+    id: uid++
+  };
   event.preventDefault();
 
+  var files = localStorage.getItem("files");
   //write to storage
-  if(localStorage.getItem("files") === null){
+  if(files === null)
+  {
     localStorage.setItem("files", []);
   }
-  var files = localStorage.getItem("files");
+
   console.log(file);
   files.push(file);
-
-  //TODO
 }
