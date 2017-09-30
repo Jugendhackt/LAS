@@ -13,6 +13,7 @@
   <!-- Custom styles for this template -->
   <link href="Teacher.css" rel="stylesheet">
   <link href="FileUpload.css" rel="stylesheet">
+  <link href="../jumbotron.css" rel="stylesheet">
 
 </head>
 <body>
@@ -49,7 +50,7 @@
       <select id="TypDrop" name="Typ" class="form-control"></select><br/>
       Videolink:<br>
       <input type="text" id="video" class="form-control" name="file"/>
-      <p><button class="btn btn-secondary btn-lg form-control" role="button" id="speichern" onclick="receiveFormValues">Speichern</button></p>
+      <p><button class="btn btn-secondary btn-lg form-control" role="button" id="speichern" onclick="receiveFormValues();return false;">Speichern</button></p>
     </form>
   </div>
 <div id="snackbar">Kein Dokument oder Video</div>

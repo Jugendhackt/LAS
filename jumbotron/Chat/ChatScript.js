@@ -19,7 +19,7 @@ document.getElementById ("TextInput").addEventListener ("keyup", TextKeyUp);
 
 var possibleMehrStuff =
   [
-    "Ich habe hier paar hübsche Aufgaben für euch",
+    "Ich habe hier paar nette Aufgaben für euch",
     "Jetzt reißt euch mal am Riemen.",
     "Da müsst ihr jetzt durch das Tal der Tränen.",
     "Die Aufgabe 3 auf Seite 59 ist ne ganz hübsche.",
