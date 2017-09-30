@@ -85,11 +85,8 @@ function receiveFormValues(event)
 
   var files = JSON.parse(localStorage.getItem("files"));
   //write to storage
-  console.log(file);
-  console.log(files);
   files.push(file);
   localStorage.setItem("files",JSON.stringify(files));
-  console.log(files);
-
+  window.location.replace("..//TeacherInterface/TeacherInterface.html");
 }
 
