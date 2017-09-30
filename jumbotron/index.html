@@ -1,93 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="../../../../favicon.ico">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="../../../../favicon.ico">
 
-    <title>Jumbotron Template for Bootstrap</title>
+  <title>Jumbotron Template for Bootstrap</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+  <!-- Bootstrap core CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 
 
-    <!-- Custom styles for this template -->
-    <link href="jumbotron.css" rel="stylesheet">
-  </head>
+  <!-- Custom styles for this template -->
+  <link href="jumbotron.css" rel="stylesheet">
+</head>
 
-  <body>
+<body>
 
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-      <a class="navbar-brand" href="#">LAS</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-    <h1 class="toph1">Digitaler Unterricht</h1>
-    </nav>
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+  <a class="navbar-brand" href="#">LAS</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <h1 class="toph1">Digitaler Unterricht</h1>
+</nav>
 
-    <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron">
-      <div class="container">
-        <h1 class="display-3">Willkommen zu LAS!</h1>
-        <p>LAS ist kurz für "Lehrer as a service". Diese Platform soll es ermöglichen Unterricht nach Hause zu verlagern.</p>
-      </div>
+<!-- Main jumbotron for a primary marketing message or call to action -->
+<div class="jumbotron">
+  <div class="container">
+    <h1 class="display-3">Willkommen zu LAS!</h1>
+    <p>LAS ist kurz für "Lehrer as a service". Diese Platform soll es ermöglichen Unterricht nach Hause zu verlagern.</p>
+  </div>
+</div>
+
+<div class="container">
+  <!-- Example row of columns -->
+  <div class="row">
+    <div class="col-md-4">
+      <h2>Ich bin Schüler</h2>
+      <form id="loginForm">
+        <div class="form-group">
+          <label for="username" class="control-label">Username</label>
+          <input type="text" class="form-control" id="username" name="username" value="" required="" title="Please enter you username" placeholder="example@yourmail.com">
+          <span class="help-block"></span>
+        </div>
+        <div class="form-group">
+          <label for="password" class="control-label">Password</label>
+          <input type="password" class="form-control" id="passwordSchueler" name="password" value="" required="" title="Please enter your password">
+          <span class="help-block"></span>
+        </div>
+        <a href="StudentInterface/Studentinterface.html" type="submit" class="btn btn-success btn-block">Login</a>
+      </form>
     </div>
-
-    <div class="container">
-      <!-- Example row of columns -->
-      <div class="row">
-        <div class="col-md-4">
-          <h2>Ich bin Schüler</h2>
-          <form id="loginForm">
-            <div class="form-group">
-              <label for="username" class="control-label">Username</label>
-              <input type="text" class="form-control" id="username" name="username" value="" required="" title="Please enter you username" placeholder="example@yourmail.com">
-              <span class="help-block"></span>
-            </div>
-            <div class="form-group">
-              <label for="password" class="control-label">Password</label>
-              <input type="password" class="form-control" id="passwordSchueler" name="password" value="" required="" title="Please enter your password">
-              <span class="help-block"></span>
-            </div>
-            <a href="TeacherInterface/TeacherInterface.html" type="submit" class="btn btn-success btn-block">Login</a>
-          </form>
+    <div class="col-md-4">
+      <h2>Ich bin Lehrer</h2>
+      <form id="loginFormLehrer">
+        <div class="form-group">
+          <label for="username" class="control-label">Username</label>
+          <input type="text" class="form-control" id="usernameLehrer" name="username" value="" required="" title="Please enter you username" placeholder="example@yourpassword.com">
+          <span class="help-block"></span>
         </div>
-        <div class="col-md-4">
-          <h2>Ich bin Lehrer</h2>
-          <form id="loginFormLehrer">
-            <div class="form-group">
-              <label for="username" class="control-label">Username</label>
-              <input type="text" class="form-control" id="usernameLehrer" name="username" value="" required="" title="Please enter you username" placeholder="example@yourpassword.com">
-              <span class="help-block"></span>
-            </div>
-            <div class="form-group">
-              <label for="password" class="control-label">Password</label>
-              <input type="password" class="form-control" id="password" name="password" value="" required="" title="Please enter your password">
-              <span class="help-block"></span>
-            </div>
-            <a href="TeacherInterface/TeacherInterface.html" type="submit" class="btn btn-success btn-block">Login</a>          </form>
+        <div class="form-group">
+          <label for="password" class="control-label">Password</label>
+          <input type="password" class="form-control" id="password" name="password" value="" required="" title="Please enter your password">
+          <span class="help-block"></span>
         </div>
-        </div>
-      </div>
+        <a href="TeacherInterface/TeacherInterface.html" type="submit" class="btn btn-success btn-block">Login</a>          </form>
+    </div>
+  </div>
+</div>
 
-      <hr>
+<hr>
 
-      <footer>
-        <p>&copy; Company 2017</p>
-      </footer>
-    </div> <!-- /container -->
+<footer>
+  <p>&copy; Company 2017</p>
+</footer>
+</div> <!-- /container -->
 
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="../../../../assets/js/vendor/popper.min.js"></script>
-    <script src="../../../../dist/js/bootstrap.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../../../assets/js/ie10-viewport-bug-workaround.js"></script>
-  </body>
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+<script src="../../../../assets/js/vendor/popper.min.js"></script>
+<script src="../../../../dist/js/bootstrap.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="../../../../assets/js/ie10-viewport-bug-workaround.js"></script>
+</body>
 </html>
