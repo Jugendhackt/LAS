@@ -1,12 +1,10 @@
 /**
  * @return {boolean}
  */
-function IsInputValid (teacher)
+function IsInputValid (teacher, username)
 {
   if (teacher)
   {
-    let usernameField = document.getElementById ("usernameLehrer");
-    let username = usernameField.value;
     let passwordField = document.getElementById ("passwordLehrer");
     let password = passwordField.value;
     return username === "Pottwal" && password === "2525" ||
@@ -15,8 +13,6 @@ function IsInputValid (teacher)
   }
   else
   {
-    let usernameField = document.getElementById ("usernameSchueler");
-    let username = usernameField.value;
     let passwordField = document.getElementById ("passwordSchueler");
     let password = passwordField.value;
     return username === "Pottwal" && password === "2525" ||
@@ -27,16 +23,22 @@ function IsInputValid (teacher)
 
 function StudentClick ()
 {
-  if (IsInputValid(false))
+  let usernameField = document.getElementById ("usernameSchueler");
+  let username = usernameField.value;
+  if (IsInputValid(false, username))
   {
+    localStorage.setItem("username", username);
     window.location.href = "StudentInterface/Studentinterface.html";
   }
 }
 
 function TeacherClick()
 {
-  if (IsInputValid(true))
+  let usernameField = document.getElementById ("usernameLehrer");
+  let username = usernameField.value;
+  if (IsInputValid(true, username))
   {
+    localStorage.setItem("username", username);
     window.location.href = "TeacherInterface/TeacherInterface.html";
   }
 }
