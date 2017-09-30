@@ -84,11 +84,12 @@ function receiveFormValues(event)
 
   var files = localStorage.getItem("files");
   //write to storage
-  if(files === null)
+  if(files == null || files == "")
   {
     localStorage.setItem("files", []);
   }
 
   console.log(file);
+  console.log(files);
   files.push(file);
 }

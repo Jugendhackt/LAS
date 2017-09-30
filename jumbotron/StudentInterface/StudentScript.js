@@ -1,6 +1,6 @@
 window.onload = function ()
 {
-
+  getFiles();
 }
 
 var thisClass = "TGI13/2";
@@ -11,26 +11,28 @@ function loadData()
 
 }
 
-function getFiles()
-{
+function getFiles() {
+  console.log("getting files");
   var files = localStorage.getItem("files");
-  if (files === null)
-  {
+  console.log(files);
+  if("" === files) console.log("leer");
+  if (files === null) {
     return [];
   }
-
-  files.forEach(function(element)
-  {
-    var klasse = element.get("klasse");
-    var thema = element.get("thema");
-    var beschreibung = element.get("beschreibung");
-    var typ = element.get("typ");
-    var data = element.get("data");
-    var metaData = element.get("metaData");
-    var date = element.get("date");
-    if (klasse === thisClass)
-    {
-      files.add(element);
+  files.forEach(function (name) {
+    var object = {
+      klasse : name.getItem("klasse"),
+      thema : name.getItem("thema"),
+      beschreibung : name.getItem("beschreibung"),
+      typ : name.getItem("typ"),
+      data : name.getItem("data"),
+      metaData : name.getItem("metaData"),
+      date : name.getItem("date")
     }
+    printLerninhalte(object)
   });
+}
+
+function printLerninhalte(element) {
+  document.getElementById("lerninhalte").innerHTML = "<h2>lalal</h2>";
 }
