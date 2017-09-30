@@ -43,10 +43,10 @@ function receiveFormValues(event)
 {
   console.log(document.getElementById("KlasseDrop").value);
   var file = {
-    klasse: document.getElementById("KlasseDrop"),
-    thema: document.getElementById("ThemaDrop"),
-    beschreibung: document.getElementById("Beschreibung"),
-    typ: document.getElementById("TypDrop")
+    klasse: document.getElementById("KlasseDrop").value,
+    thema: document.getElementById("ThemaDrop").value,
+    beschreibung: document.getElementById("Beschreibung").value,
+    typ: document.getElementById("TypDrop").value
   }
   event.preventDefault();
 
@@ -55,6 +55,7 @@ function receiveFormValues(event)
     localStorage.setItem("files", []);
   }
   var files = localStorage.getItem("files");
+  console.log(file);
   files.push(file);
 
   //TODO
