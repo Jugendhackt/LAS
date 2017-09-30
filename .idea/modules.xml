@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/LAS.iml" filepath="$PROJECT_DIR$/.idea/LAS.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/LAS.iml" filepath="$PROJECT_DIR$/.idea/LAS.iml" />
       <module fileurl="file://$PROJECT_DIR$/LAS.iml" filepath="$PROJECT_DIR$/LAS.iml" />
     </modules>
   </component>
