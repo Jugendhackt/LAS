@@ -43,8 +43,10 @@ function receiveFormValues(event)
 {
   console.log(document.getElementById("KlasseDrop").value);
   var file = {
-    klasse: document.getElementById("Klasse"),
-
+    klasse: document.getElementById("KlasseDrop"),
+    thema: document.getElementById("ThemaDrop"),
+    beschreibung: document.getElementById("Beschreibung"),
+    typ: document.getElementById("TypDrop")
   }
   event.preventDefault();
 
@@ -54,6 +56,7 @@ function receiveFormValues(event)
   }
   localStorage.setItem("files", []);
   var files = localStorage.getItem("files");
+  files.push(file);
 
   //TODO
 }
