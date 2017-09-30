@@ -37,6 +37,6 @@ function printLerninhalte(element)
           "<h4 class='card-title'>" + element.thema + "</h4>" +
           "<hr>" +
           "<p class='card-text'>" + element.beschreibung + "</p>" +
-          "<a href=" + element.data + " class='btn btn-primary' download\>" +
+          "<a href=" + element.data + " class='btn btn-primary' download='" + element.metaData + "'\>" +
   element.typ;
 }

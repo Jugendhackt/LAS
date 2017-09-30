@@ -76,13 +76,14 @@ function receiveFormValues(event)
     return;
   }
   console.log(document.getElementById("KlasseDrop").value);
+  console.log("Metadata: ", metaDataSelectedFile);
   var file = {
     klasse: document.getElementById("KlasseDrop").value,
     thema: document.getElementById("ThemaDrop").value,
     beschreibung: document.getElementById("Beschreibung").value,
     typ: document.getElementById("TypDrop").value,
     data: selectedFile,
-    metaData: metaDataSelectedFile,
+    metaData: metaDataSelectedFile.name,
     date: new Date().getDate(),
     video: document.getElementById("video").value,
     id: uid++
