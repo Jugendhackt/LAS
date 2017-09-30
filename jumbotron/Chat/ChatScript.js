@@ -6,10 +6,13 @@ function init ()
   var text = "";
   var oldMessages = JSON.parse (localStorage.getItem ("chatMessages"));
   oldMessages.forEach (function (element) {
-    text += "<br/>" + element;
+    text += "<br/><br/>" + element;
   });
   var textBox = document.getElementById ("content");
   textBox.innerHTML = text;
+  window.scrollTo(0,document.body.scrollHeight);
+  var textInput = document.getElementById("TextInput");
+  textInput.focus();
 }
 
 document.getElementById ("TextInput").addEventListener ("keyup", TextKeyUp);
@@ -33,8 +36,8 @@ function TextKeyUp (event)
   var text = textBox.value;
   var username = localStorage.getItem ("username");
   var messages = JSON.parse (localStorage.getItem ("chatMessages"));
-  messages[messages.length] = "<br/>" + username + ": " + text;
-  messages[messages.length] = "<br/>" + "Dr. Rhem" + ": " + possibleMehrStuff[Math.floor (Math.random () * possibleMehrStuff.length)];
+  messages[messages.length] = username + ": " + text;
+  messages[messages.length] = "Frau Mehr" + ": " + possibleMehrStuff[Math.floor (Math.random () * possibleMehrStuff.length)];
   var stringToSave = JSON.stringify (messages);
   localStorage.setItem ("chatMessages", stringToSave);
   textBox.value = "";
