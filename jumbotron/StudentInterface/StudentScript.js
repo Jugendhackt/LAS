@@ -24,7 +24,8 @@ function getFiles() {
   });
 }
 
-function printLerninhalte(element) {
+function printLerninhalte(element)
+{
   console.log(element)
   document.getElementById("lerninhalte").innerHTML = "<div id=\"lerninhalte\">\n" +
     "      <div class=\"card\" style=\"width: 20rem;\">\n" +
@@ -35,6 +36,6 @@ function printLerninhalte(element) {
     "          <hr>\n" +
     "          <p class=\"card-text\">" + element.beschreibung +
     "</p>\n" +
-    "<a href=\"#\" class=\"btn btn-primary\">" +
+    "<a href=" + element.data + " class='btn btn-primary' download\>" +
   element.typ;
 }
