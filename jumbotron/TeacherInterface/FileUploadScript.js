@@ -1,6 +1,7 @@
 window.onload = function ()
 {
   fillFields();
+  document.getElementById("speichern").addEventListener("click", receiveFormValues);
 };
 
 function fillFields ()
@@ -38,7 +39,21 @@ function getTypen ()
   return ["Film", "PDF", "Bild"]
 }
 
-function receiveFormValues()
-{O
-  //TOD
+function receiveFormValues(event)
+{
+  console.log(document.getElementById("KlasseDrop").value);
+  var file = {
+    klasse: document.getElementById("Klasse"),
+
+  }
+  event.preventDefault();
+
+  //write to storage
+  if(localStorage.getItem("files") == null){
+    localStorage.setItem("files", []);
+  }
+  localStorage.setItem("files", []);
+  var files = localStorage.getItem("files");
+
+  //TODO
 }
