@@ -1,8 +1,7 @@
-window.onload = function ()
-{
-  if(localStorage.getItem("files") === null)
+ console.log("init");
+  if(localStorage.getItem("files") === null || localStorage.getItem("files") === "")
   {
-    localStorage.setItem("files", []);
+    localStorage.setItem("files", JSON.stringify([]));
   }
   if (localStorage.getItem("chatMessages") === null)
   {
@@ -12,4 +11,3 @@ window.onload = function ()
   {
     localStorage.setItem("username", "");
   }
-};

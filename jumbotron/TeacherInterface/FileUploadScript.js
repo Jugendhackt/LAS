@@ -82,14 +82,12 @@ function receiveFormValues(event)
   };
   event.preventDefault();
 
-  var files = localStorage.getItem("files");
+  var files = JSON.parse(localStorage.getItem("files"));
   //write to storage
-  if(files == null || files == "")
-  {
-    localStorage.setItem("files", []);
-  }
-
   console.log(file);
   console.log(files);
   files.push(file);
+  localStorage.setItem("files",JSON.stringify(files));
+  console.log(files);
+
 }
