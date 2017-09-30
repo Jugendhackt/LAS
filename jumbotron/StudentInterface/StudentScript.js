@@ -27,7 +27,7 @@ function getFiles() {
 function printLerninhalte(element)
 {
   console.log(element)
-  document.getElementById("lerninhalte").innerHTML = "<div id=\"lerninhalte\">\n" +
+  document.getElementById("lerninhalte").innerHTML +=  "<div id=\"lerninhalte\">\n" +
     "      <div class=\"card\" style=\"width: 20rem;\">\n" +
     "        <div class=\"card-body\">\n" +
     "          <h4 class=\"card-title\">" +
