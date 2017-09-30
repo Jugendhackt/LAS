@@ -9,7 +9,8 @@ function IsInputValid (teacher, username)
     let password = passwordField.value;
     return username === "Pottwal" && password === "2525" ||
       username === "Blumentopf" && password === "4242" ||
-      username === "HerzAusGold" && password === "2542";
+      username === "HerzAusGold" && password === "2542"||
+      username === "Marvin" && password === "IstDochEhNichtSicher";
   }
   else
   {
@@ -17,7 +18,8 @@ function IsInputValid (teacher, username)
     let password = passwordField.value;
     return username === "Pottwal" && password === "2525" ||
       username === "Blumentopf" && password === "4242" ||
-      username === "HerzAusGold" && password === "2542";
+      username === "HerzAusGold" && password === "2542" ||
+      username === "Marvin" && password === "IstDochEhNichtSicher";
   }
 }
 
