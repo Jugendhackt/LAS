@@ -13,26 +13,28 @@ function loadData()
 
 function getFiles() {
   console.log("getting files");
-  var files = localStorage.getItem("files");
+  var files = JSON.parse(localStorage.getItem("files"));
   console.log(files);
   if("" === files) console.log("leer");
-  if (files === null) {
+  if (files === null || files === "") {
     return [];
   }
   files.forEach(function (name) {
-    var object = {
-      klasse : name.getItem("klasse"),
-      thema : name.getItem("thema"),
-      beschreibung : name.getItem("beschreibung"),
-      typ : name.getItem("typ"),
-      data : name.getItem("data"),
-      metaData : name.getItem("metaData"),
-      date : name.getItem("date")
-    }
-    printLerninhalte(object)
+    printLerninhalte(name)
   });
 }
 
 function printLerninhalte(element) {
-  document.getElementById("lerninhalte").innerHTML = "<h2>lalal</h2>";
+  console.log(element)
+  document.getElementById("lerninhalte").innerHTML = "<div id=\"lerninhalte\">\n" +
+    "      <div class=\"card\" style=\"width: 20rem;\">\n" +
+    "        <div class=\"card-body\">\n" +
+    "          <h4 class=\"card-title\">" +
+  element.thema +
+  "</h4>\n" +
+    "          <hr>\n" +
+    "          <p class=\"card-text\">" + element.beschreibung +
+    "</p>\n" +
+    "<a href=\"#\" class=\"btn btn-primary\">" +
+  element.typ;
 }
