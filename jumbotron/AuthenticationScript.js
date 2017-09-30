@@ -32,6 +32,10 @@ function StudentClick ()
     localStorage.setItem("username", username);
     window.location.href = "StudentInterface/Studentinterface.html";
   }
+  else
+  {
+    showSnackbar();
+  }
 }
 
 function TeacherClick()
@@ -43,4 +47,17 @@ function TeacherClick()
     localStorage.setItem("username", username);
     window.location.href = "TeacherInterface/TeacherInterface.html";
   }
+  else
+  {
+    showSnackbar();
+  }
+}
+
+function showSnackbar()
+{
+  var x = document.getElementById("snackbar");
+
+  x.className = "show";
+
+  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
 }
