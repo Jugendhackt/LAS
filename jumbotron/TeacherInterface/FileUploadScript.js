@@ -19,10 +19,6 @@ function fillFields ()
     var i = new Option(element, element, false, false);
     themen.add(i);
   });
-  getTypen().forEach(function (element) {
-    var i = new Option(element, element, false, false);
-    typen.add(i);
-  });
 }
 
 function getClasses()
@@ -33,11 +29,6 @@ function getClasses()
 function getThemen()
 {
   return ["Deutsch", "Englisch", "Informatik", "Geschichte"]
-}
-
-function getTypen ()
-{
-  return ["PDF", "Bild"]
 }
 
 function handleFileSelect (evt)
@@ -81,7 +72,7 @@ function receiveFormValues(event)
     klasse: document.getElementById("KlasseDrop").value,
     thema: document.getElementById("ThemaDrop").value,
     beschreibung: document.getElementById("Beschreibung").value,
-    typ: document.getElementById("TypDrop").value,
+    typ: metaDataSelectedFile.type,
     data: selectedFile,
     metaData: metaDataSelectedFile.name,
     date: new Date().getDate(),
