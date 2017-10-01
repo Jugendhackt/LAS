@@ -40,6 +40,11 @@ function getFiles()
     return [];
   }
   var currentClass = localStorage.getItem("currentClass");
+  var div = document.getElementById("lerninhalte");
+  while (div.firstChild)
+  {
+    div.removeChild(div.firstChild);
+  }
   files.forEach(function (element)
   {
     if (element.klasse === currentClass)
@@ -52,16 +57,33 @@ function getFiles()
 function printLerninhalte(element)
 {
   console.log(element);
-  //var divLerninhalte = document.createElement("div");
-  //divLerninhalte.setAttribute("id", "lerninhalte");
-  //document.getElementById("lerninhalte").innerHTML += divLerninhalte.to TODO
-  document.getElementById("lerninhalte").innerHTML +=
-    "<div id='lerninhalte'>" +
-      "<div class='card' style='width: 20rem;'>" +
-        "<div class='card-body'>" +
-          "<h4 class='card-title'>" + element.thema + "</h4>" +
-          "<hr>" +
-          "<p class='card-text'>" + element.beschreibung + "</p>" +
-          "<a href='" + (element.video === "" ? element.data : element.video) + "' class='btn btn-primary'" + (element.metaData === null ? "" : (" download='" + element.metaData)) + "'\>" +
-    (element.typ !== null ? element.typ : "video");
+
+  var divCard = document.createElement("div");
+  divCard.setAttribute("class", "card");
+  divCard.setAttribute("style", "width: 20rem;");
+  var divCardBody = document.createElement("div");
+  divCardBody.setAttribute("class", "card-body");
+  var thema = document.createElement("h4");
+  thema.setAttribute("class", "card-title");
+  thema.appendChild(document.createTextNode(element.thema));
+  var horizontalRuler = document.createElement("hr");
+  var beschreibung = document.createElement("p");
+  beschreibung.setAttribute("class", "card-text");
+  beschreibung.appendChild(document.createTextNode(element.beschreibung));
+  var button = document.createElement("a");
+  button.setAttribute("href", (element.video === "" ? element.data : element.video));
+  button.setAttribute("class", "btn btn-primary");
+  if (element.metaData !== null)
+  {
+    button.setAttribute("download", "'" + element.metaData + "'");
+  }
+  button.appendChild(document.createTextNode(element.typ !== null ? element.typ : "video"));
+
+  divCardBody.appendChild(thema);
+  divCardBody.appendChild(horizontalRuler);
+  divCardBody.appendChild(beschreibung);
+  divCardBody.appendChild(button);
+  divCard.appendChild(divCardBody);
+
+  document.getElementById("lerninhalte").appendChild(divCard);
 }
