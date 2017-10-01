@@ -17,7 +17,7 @@
   }
   if (localStorage.getItem("themes") === null || localStorage.getItem("themes") === "")
   {
-    localStorage.setItem("themes", JSON.stringify(["Deutsch", "Englisch", "Informatik", "Geschichte"]));
+    localStorage.setItem("themes", JSON.stringify(["Deutsch", "Englisch", "Informatik", "Geschichte", "Wirtschaft", "Religion", "Französisch", "Musik", "Geographie"]));
   }
   if (localStorage.getItem("currentClass"))
   {
