@@ -7,7 +7,7 @@
   <meta name="author" content="">
   <link rel="icon" href="../../../../favicon.ico">
 
-  <title>Jumbotron Template for Bootstrap</title>
+  <title>Schüler</title>
 
   <!-- Bootstrap core CSS -->
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
@@ -28,8 +28,6 @@
   <h1 class="toph1">Digitaler Unterricht</h1>
 </nav>
 
-<script src="StudentScript.js" >onload()</script>
-
 <!-- Main jumbotron for a primary marketing message or call to action -->
 <div class="jumbotron">
   <div class="container">
@@ -40,8 +38,14 @@
 </div>
 
 <div class="container">
-  <!-- Example row of columns -->
-  <div class="row"}>
+  <div class="row">
+    Klasse: <br/>
+    <select id="KlasseDrop" name="Klasse" class="form-control" onchange="classesChanged()"></select>
+  </div>
+
+  <hr>
+
+  <div class="row">
     <div class="col-md-6">
       <h2>Lernen</h2>
       <div id="lerninhalte">
@@ -72,6 +76,8 @@
   </footer>
 </div> <!-- /container -->
 
+
+<script src="StudentScript.js" ></script>
 
 <!-- Bootstrap core JavaScript
 ================================================== -->

@@ -26,12 +26,12 @@ function fillFields ()
 
 function getClasses()
 {
-  return ["TGI11/1", "TGI11/2", "TGI12/1", "TGI12/2", "TGI13/1", "TGI13/2"]
+  return JSON.parse(localStorage.getItem("classes"));
 }
 
 function getThemen()
 {
-  return ["Deutsch", "Englisch", "Informatik", "Geschichte"]
+  return JSON.parse(localStorage.getItem("themes"));
 }
 
 function handleFileSelect (evt)

@@ -1,26 +1,51 @@
-window.onload = function ()
+onLoad();
+
+function onLoad()
 {
+  getFiles();
+  fillClasses();
+}
+
+var files;
+
+function classesChanged()
+{
+  var drop = document.getElementById("KlasseDrop");
+  localStorage.setItem("currentClass", drop.options[drop.selectedIndex].text);
   getFiles();
 }
 
-var thisClass = "TGI13/2";
-var files;
-
-function loadData()
+function fillClasses()
 {
-
+  var drop = document.getElementById("KlasseDrop");
+  getClasses().forEach(function (element) {
+    var i = new Option(element, element,  false, false);
+    drop.add(i);
+  });
 }
 
-function getFiles() {
+function getClasses()
+{
+  return JSON.parse(localStorage.getItem("classes"));
+}
+
+function getFiles()
+{
   console.log("getting files");
   var files = JSON.parse(localStorage.getItem("files"));
   console.log(files);
   if("" === files) console.log("leer");
-  if (files === null || files === "") {
+  if (files === null || files === "")
+  {
     return [];
   }
-  files.forEach(function (name) {
-    printLerninhalte(name)
+  var currentClass = localStorage.getItem("currentClass");
+  files.forEach(function (element)
+  {
+    if (element.klasse === currentClass)
+    {
+      printLerninhalte (element);
+    }
   });
 }
 
