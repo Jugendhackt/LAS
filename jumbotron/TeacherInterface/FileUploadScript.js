@@ -1,8 +1,11 @@
-window.onload = function ()
+onLoad();
+
+function onLoad ()
 {
   fillFields();
   document.getElementById("speichern").addEventListener("click", receiveFormValues);
   document.getElementById("file").addEventListener("change", handleFileSelect, false)
+  document.getElementById("video").disabled = false;
 };
 
 function fillFields ()
@@ -48,6 +51,8 @@ function handleFileSelect (evt)
     {
       selectedFile = e.target.result;
       metaDataSelectedFile = theFile;
+      document.getElementById("video").disabled = true;
+      document.getElementById("video").value = "";
       console.log(theFile, " - ", selectedFile);
     };
   })(files[0]);
@@ -72,9 +77,9 @@ function receiveFormValues(event)
     klasse: document.getElementById("KlasseDrop").value,
     thema: document.getElementById("ThemaDrop").value,
     beschreibung: document.getElementById("Beschreibung").value,
-    typ: metaDataSelectedFile.type,
+    typ: metaDataSelectedFile === null ? null : metaDataSelectedFile.type,
     data: selectedFile,
-    metaData: metaDataSelectedFile.name,
+    metaData: metaDataSelectedFile === null ? null : metaDataSelectedFile.name,
     date: new Date().getDate(),
     video: document.getElementById("video").value,
     id: uid++
@@ -86,7 +91,6 @@ function receiveFormValues(event)
   files.push(file);
   localStorage.setItem("files",JSON.stringify(files));
   window.location.replace("..//TeacherInterface/TeacherInterface.html");
-
 }
 function showSnackbar()
 {
