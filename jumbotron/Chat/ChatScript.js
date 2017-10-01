@@ -26,6 +26,8 @@ var possibleMehrStuff =
     "PCHSCHSCHT!"
   ];
 
+var easterEgg = "Petunientopf: He, das ist ja wirklich aufregend, so vieles rauszufinden, so vieles, was ich noch vor mir habe, mir wird ganz schwindlig vor lauter Vorfreude. – Was ist denn das, was da plötzlich so schnell auf mich zukommt? So sehr, sehr schnell. So riesig und so flach und so rund. Das braucht einen riesigen Namen … wie …. Grund! Ob er wohl nett zu mir ist?"
+
 function TextKeyUp (event)
 {
   if (event.keyCode !== 13)
@@ -37,7 +39,12 @@ function TextKeyUp (event)
   var username = localStorage.getItem ("username");
   var messages = JSON.parse (localStorage.getItem ("chatMessages"));
   messages[messages.length] = username + ": " + text;
-  messages[messages.length] = "Frau Mehr" + ": " + possibleMehrStuff[Math.floor (Math.random () * possibleMehrStuff.length)];
+  var botReply = "Frau Mehr" + ": " + possibleMehrStuff[Math.floor (Math.random () * possibleMehrStuff.length)];
+  if (text === "Oh nein, nicht schon wieder.")
+  {
+    botReply = easterEgg;
+  }
+  messages[messages.length] = botReply;
   var stringToSave = JSON.stringify (messages);
   localStorage.setItem ("chatMessages", stringToSave);
   textBox.value = "";
