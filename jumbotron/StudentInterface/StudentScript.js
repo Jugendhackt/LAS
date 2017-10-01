@@ -77,7 +77,7 @@ function printLerninhalte(element)
   {
     button.setAttribute("download", "'" + element.metaData + "'");
   }
-  button.appendChild(document.createTextNode(element.typ !== null ? element.typ : "video"));
+  button.appendChild(document.createTextNode(element.typ !== null ? element.typ : "Video"));
 
   divCardBody.appendChild(thema);
   divCardBody.appendChild(horizontalRuler);
