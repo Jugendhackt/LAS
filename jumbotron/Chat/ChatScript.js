@@ -39,7 +39,7 @@ function TextKeyUp (event)
   var username = localStorage.getItem ("username");
   var messages = JSON.parse (localStorage.getItem ("chatMessages"));
   messages[messages.length] = username + ": " + text;
-  var botReply = "Frau Mehr" + ": " + possibleMehrStuff[Math.floor (Math.random () * possibleMehrStuff.length)];
+  var botReply = "Dr. Rehm" + ": " + possibleMehrStuff[Math.floor (Math.random () * possibleMehrStuff.length)];
   if (text === "Oh nein, nicht schon wieder.")
   {
     botReply = easterEgg;
