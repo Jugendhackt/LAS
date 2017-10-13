@@ -26,7 +26,7 @@ var possibleMehrStuff =
     "PCHSCHSCHT!"
   ];
 
-var easterEgg = "Petunientopf: He, das ist ja wirklich aufregend, so vieles rauszufinden, so vieles, was ich noch vor mir habe, mir wird ganz schwindlig vor lauter Vorfreude. – Was ist denn das, was da plötzlich so schnell auf mich zukommt? So sehr, sehr schnell. So riesig und so flach und so rund. Das braucht einen riesigen Namen … wie …. Grund! Ob er wohl nett zu mir ist?"
+var easterEgg = "Der Pottwal: He, das ist ja wirklich aufregend, so vieles rauszufinden, so vieles, was ich noch vor mir habe, mir wird ganz schwindlig vor lauter Vorfreude. – Was ist denn das, was da plötzlich so schnell auf mich zukommt? So sehr, sehr schnell. So riesig und so flach und so rund. Das braucht einen riesigen Namen … wie …. Grund! Ob er wohl nett zu mir ist?"
 
 function TextKeyUp (event)
 {
@@ -39,7 +39,7 @@ function TextKeyUp (event)
   var username = localStorage.getItem ("username");
   var messages = JSON.parse (localStorage.getItem ("chatMessages"));
   messages[messages.length] = username + ": " + text;
-  var botReply = "Dr. Rehm" + ": " + possibleMehrStuff[Math.floor (Math.random () * possibleMehrStuff.length)];
+  var botReply = "Dr. Rhem" + ": " + possibleMehrStuff[Math.floor (Math.random () * possibleMehrStuff.length)];
   if (text === "Oh nein, nicht schon wieder.")
   {
     botReply = easterEgg;
